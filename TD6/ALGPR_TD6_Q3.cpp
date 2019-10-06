@@ -39,10 +39,21 @@ t_Noeud* creeElement(int valeur) {
 }
 
 // -------------------------------------------------------
-t_Noeud* insertABR(t_Noeud* unArbre, int valeur) {
-
-	// à compléter ...
-
+t_Noeud* insertABR(t_Noeud* unArbre, int valeur)
+{
+	if(unArbre == NULL)
+	{
+		unArbre = creeElement(valeur);
+	}
+	else
+	{
+		if(valeur < unArbre->valeur)
+			unArbre->gauche = insertABR(unArbre->gauche, valeur);
+		else if(valeur > unArbre->valeur)
+			unArbre->droite = insertABR(unArbre->droite, valeur);
+		else
+			cout << "Deu algo errado, porque o valor ja tem na arvore! Elemento nao adicionado!" << endl; 
+	}
 	return unArbre;
 }
 
@@ -56,31 +67,58 @@ void libereArbre(t_Noeud* unArbre) {
 }
 
 // -------------------------------------------------------
-void affichePrefixe(t_Noeud* unArbre) {
-	// A modifier ...
+void affichePrefixe(t_Noeud* unArbre) 
+{
+	if(unArbre == NULL)
+		return;
+	cout << unArbre->valeur << endl;
+	affichePrefixe(unArbre->gauche);
+	affichePrefixe(unArbre->droite);
 }
 
 // -------------------------------------------------------
-void afficheInfixe(t_Noeud* unArbre) {
-	// A modifier ...
+void afficheInfixe(t_Noeud* unArbre) 
+{
+	if(unArbre == NULL)
+		return;
+	afficheInfixe(unArbre->gauche);
+	cout << unArbre->valeur << endl;
+	afficheInfixe(unArbre->droite);
 }
 
 // -------------------------------------------------------
-void affichePostfixe(t_Noeud* unArbre) {
-	// A modifier ...
-	
+void affichePostfixe(t_Noeud* unArbre) 
+{
+	if(unArbre == NULL)
+		return;
+	affichePostfixe(unArbre->gauche);
+	affichePostfixe(unArbre->droite);
+	cout << unArbre->valeur << endl;
 }
 
 // -------------------------------------------------------
 int nbNoeuds(t_Noeud* unArbre) {
-	// A modifier ...
-	return 0;
+	if(unArbre == NULL)
+		return 0;
+	else
+		return 1 + nbNoeuds(unArbre->gauche) + nbNoeuds(unArbre->droite);
 }
 
 // -------------------------------------------------------
 int hauteur(t_Noeud* unArbre) {
-	// A modifier ...
-	return 0;
+	int altura_esquerda, altura_direita, maior_altura;
+	if(unArbre == NULL)
+		return 0;
+	else
+	{
+		altura_esquerda = hauteur(unArbre->gauche);
+		altura_direita  = hauteur(unArbre->droite);
+		if(altura_direita > altura_esquerda)
+			maior_altura = altura_direita;
+		else
+			maior_altura = altura_esquerda;
+		return 1 + maior_altura;
+	}
 }
 
 // ---------------------------------------------------------------------------------------
