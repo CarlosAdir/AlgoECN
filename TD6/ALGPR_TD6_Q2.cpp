@@ -37,21 +37,25 @@ ListeElt* creeElement(int valeur) {
 
 // -------------------------------------------------------
 ListeElt* addFirst(ListeElt* laListe, ListeElt* unElement) {
-	// A modifier ...
-		
+	unElement->suivant = laListe;
+	laListe = unElement;
 	return laListe;
 }
 
 // -------------------------------------------------------
 void afficheIteratif(ListeElt* laListe) {
-	// A modifier ...
-	
+	while(laListe != NULL)
+	{
+		cout << laListe->valeur << endl;
+		laListe = laListe->suivant;
+	}
 }
 
 // -------------------------------------------------------
 void afficheRecursif(ListeElt* laListe) {
-	// A modifier ...
-	
+	cout << laListe->valeur << endl;
+	if(laListe->suivant != NULL)
+		afficheRecursif(laListe->suivant);
 }
 
 // ---------------------------------------------------------------------------------------
