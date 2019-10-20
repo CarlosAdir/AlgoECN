@@ -4,7 +4,8 @@
 //#include <cstring>
 #include <iostream>
 
-const int NOMBRE_PERSONNES = 100;
+#define NOMBRE_PERSONNES 100
+#define NOM_REPERTOIRE "repertoire.txt"
 
 struct personne
 {

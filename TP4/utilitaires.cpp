@@ -18,20 +18,18 @@ Notre especification:
 bool initTabNomPrenom(std::string* listNom, std::string* listPrenom, int *nbNom, int *nbPrenom)
 {
 	std::ifstream file_nom, file_prenom;
-	const std::string nom_file = "Noms_TP4.txt";
-	const std::string prenom_file = "Prenoms_TP4.txt";
 	int i;
 
-	file_nom.open(nom_file);
+	file_nom.open(NOMS_FILENAME);
 	if (!file_nom) 
 	{
-		std::cout << "Unable to open file " << nom_file;
+		std::cout << "Unable to open file " << NOMS_FILENAME;
 		return false;
 	}
-	file_prenom.open(prenom_file);
+	file_prenom.open(PRENOMS_FILENAME);
 	if (!file_prenom) 
 	{
-		std::cout << "Unable to open file " << prenom_file;
+		std::cout << "Unable to open file " << PRENOMS_FILENAME;
 		return false;
 	}
 
@@ -79,13 +77,18 @@ bool genererRepertoire(vectPersonne vector)
 	{
 		vector[i] = genererPersonne(listNom, listPrenom, nbNom, nbPrenom);
 	}
+	out << QTD_PERSONNES << std::endl;
 	for(i = 0; i < QTD_PERSONNES; i++)
 	{
-		std::cout << vector[i].nom << " " << vector[i].prenom << " ";
+		/*
+		std::cout << vector[i].nom << " ";
+		std::cout << vector[i].prenom << " ";
 		std::cout << vector[i].numss;
 		std::cout << std::endl; 
-		out << vector[i].nom << " " << vector[i].prenom << " " ;
-		out << vector[i].numss;
+		*/
+		out << vector[i].nom << " ";
+		out << vector[i].prenom << " ";
+		out << vector[i].numss << " ";
 		out << std::endl;
 	}
 	out.close();
@@ -129,7 +132,7 @@ bool comparerPersonne(personne p1, personne p2)
 	if(egalitePersonne(p1, p2)) // Si les personnes sont les memes
 	{
 		std::cout << "As duas pessoas sao iguais! Nao pode!" << std::endl;
-		exit(1);
+		//exit(1);
 	}
 	if(p1.nom < p2.nom)
 		return true;
@@ -147,6 +150,6 @@ bool comparerPersonne(personne p1, personne p2)
 	// Si le algorithme Ici nous avons que si 
 	std::cout << "Il y a une malvaise chose, parce que ce n'est pas possible etre ici, ";
 	std::cout << "dans la fonction comparerPersonne" << std::endl;
-	exit(1);
+	//exit(1);
 	return false;
 }

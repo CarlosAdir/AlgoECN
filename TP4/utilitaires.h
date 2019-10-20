@@ -1,15 +1,18 @@
 #ifndef UTILITAIRES_H_INCLUDED
 #define UTILITAIRES_H_INCLUDED
 
+#define NOMS_FILENAME "Noms_TP4.txt"
+#define PRENOMS_FILENAME "Prenoms_TP4.txt"
+
 /*
 Lecture des fichiers Prenoms.txt et Noms.txt et stockage dans
 des tableaux passés en paramètres.
 */
 /*
 Notre especification:
-	* Il renverra la quantite de personne que il y a dans le archive
-	* Si il n'y a rien, il renverra 0
-	* Si il a quelquer autre errour, il va envoyer -1, comme par exemple, la non-existence des archives
+	* Il renverra un valeur boolean que montre si les archives ont pu lire les choses dedans
+	* Faux si il y a n'importe que errour
+	* Vrai sinon
 */
 bool initTabNomPrenom(std::string* listNom, std::string* listPrenom, int *nbNom, int *nbPrenom);
 
