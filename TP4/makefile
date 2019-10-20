@@ -5,7 +5,7 @@ compila: type_def utilitaire_generation utilitaires main
 
 type_def:
 
-utilitaires:
+utilitaires: type_def utilitaire_generation
 	g++ -c utilitaires.cpp -Wall
 
 utilitaire_generation: type_def
