@@ -3,7 +3,7 @@ all: compila clean clear executa
 c: clean compila
 
 compila: type_def utilitaire_generation utilitaires repertoire main 
-	g++ utilitaires.o utilitaire_generation.o repertoire.o TP4.o -o executavel -L/usr/X11R6/lib -lX11
+	g++ utilitaires.o utilitaire_generation.o repertoire.o TP4.o -o executavel
 
 type_def:
 

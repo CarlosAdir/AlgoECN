@@ -56,13 +56,14 @@ Personne pour créer une personne aléatoirement, puis écrit cette personne dan
 Notre especification:
 	Il renverra la personne que il a tiré
 */
-bool genererRepertoire(vectPersonne vector)
+bool genererRepertoire()
 {
-	const int QTD_PERSONNES = 30;
-	std::string listNom[1001];
-	std::string listPrenom[1001];
+	const int QTT_PERSONNES = NOMBRE_PERSONNES;
+	std::string listNom[1000];
+	std::string listPrenom[12000];
 	int i, nbNom, nbPrenom;
 	bool response;
+	vectPersonne vector;
 	std::ofstream out("repertoire.txt");
 
 	response = initTabNomPrenom(listNom, listPrenom, &nbNom, &nbPrenom);
@@ -73,13 +74,10 @@ bool genererRepertoire(vectPersonne vector)
 	}
 	std::cout << "   nbNom = " << nbNom << std::endl;
 	std::cout << "nbPrenom = " << nbPrenom << std::endl;
-	for(i = 0; i < QTD_PERSONNES; i++)
+	out << QTT_PERSONNES << std::endl;
+	for(i = 0; i < QTT_PERSONNES; i++)
 	{
 		vector[i] = genererPersonne(listNom, listPrenom, nbNom, nbPrenom);
-	}
-	out << QTD_PERSONNES << std::endl;
-	for(i = 0; i < QTD_PERSONNES; i++)
-	{
 		/*
 		std::cout << vector[i].nom << " ";
 		std::cout << vector[i].prenom << " ";
@@ -131,7 +129,7 @@ bool comparerPersonne(personne p1, personne p2)
 	// nous irons faire ça seulemente pour la securité de le algorithme
 	if(egalitePersonne(p1, p2)) // Si les personnes sont les memes
 	{
-		std::cout << "As duas pessoas sao iguais! Nao pode!" << std::endl;
+		//std::cout << "As duas pessoas sao iguais! Nao pode!" << std::endl;
 		//exit(1);
 	}
 	if(p1.nom < p2.nom)
@@ -148,8 +146,8 @@ bool comparerPersonne(personne p1, personne p2)
 		return false;
 
 	// Si le algorithme Ici nous avons que si 
-	std::cout << "Il y a une malvaise chose, parce que ce n'est pas possible etre ici, ";
-	std::cout << "dans la fonction comparerPersonne" << std::endl;
+	// std::cout << "Il y a une malvaise chose, parce que ce n'est pas possible etre ici, ";
+	// std::cout << "dans la fonction comparerPersonne" << std::endl;
 	//exit(1);
 	return false;
 }

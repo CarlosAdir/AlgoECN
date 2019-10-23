@@ -27,7 +27,7 @@ Personne pour créer une personne aléatoirement, puis écrit cette personne dan
 Notre especification:
 	Il renverra la personne que il a tiré
 */
-bool genererRepertoire(vectPersonne vector);
+bool genererRepertoire();
 
 
 

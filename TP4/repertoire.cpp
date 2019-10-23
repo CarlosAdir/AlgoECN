@@ -13,31 +13,100 @@ void afficherPersonne(const personne &p)
 }
 
 
+//Fonctions par rapport a les Tableaux: 
 
-
-
-void afficherVector(vectPersonne mon_vector)
+void afficherTableau(personne tableau[], int taille_t)
 {
+	int i; 
 
-}
-void ajouterVector()
-{
-
-}
-void rechercherVector()
-{
-
-}
-void supprimerVector()
-{
-
-}
-void lectureRepertoireVector(vectPersonne mon_vector, const std::string FILE_NAME)
-{
-
+    for (i= 0; i< taille_t; i++)
+    {
+        std::cout << tableau[i].nom << "," << tableau[i].prenom << "," << tableau[i].numss << std::endl;  
+    }
 }
 
+void ajouterTableau(vectPersonne tableau, int taille_t, personne p)
+{
+	int i, j; 
+	if (taille_t ==0)
+	{
+		tableau[0] = p; 
+		taille_t++; 
+	}
+	else
+	{
+		for (i=0; i<taille_t; i++)
+		{
+			if(!comparerPersonne(p, tableau[i]))
+			{
+				break;
+			}
+		}
+		if (!egalitePersonne (p, tableau[i]) )
+		{
+			for (j= taille_t; j>=i; j--)
+			{
+				tableau [j+1] = tableau[j]; 
+			}
 
+			tableau[i] = p; 
+			taille_t ++; 
+		}
+	}
+}
+
+bool rechercherTableau(vectPersonne tableau, int taille_t, personne p)
+{
+	int i; 
+	for (i= 0; i< taille_t; i++)
+	{
+		if (egalitePersonne (p, tableau[i]))
+		{
+			return true; 
+		}
+	}
+
+	return false; 
+}
+
+
+void supprimerTableau(vectPersonne tableau, int taille_t, personne p)
+{
+	int i, j; 
+	for (i= 0; i< taille_t; i++)
+	{
+		if(egalitePersonne (tableau [i], p))
+		{
+			taille_t --; 
+			break; 
+		}
+	}
+	for (j=i; j<taille_t; j++)
+	{
+		tableau[j] = tableau [j+1]; 
+	}
+}
+
+
+int TableaulectureRepertoire(personne vect[], std::string repertoire_text)
+{
+	std::ifstream R; 
+    R.open (repertoire_text); 
+    int numero, i; 
+    personne p; 
+    R >> numero;
+
+    for (i=0; i<numero; i++)
+    {
+        R>> p.nom; 
+        R>> p.prenom; 
+        R >>p.numss;   
+        vect[i] = p; 
+    } 
+
+    R.close ();
+    return numero;
+}
 
 
 
@@ -102,7 +171,7 @@ elementListe *supprimerListe(elementListe *ma_liste, const personne &p)
 	elementListe *mon_pointer = ma_liste;
 	if(egalitePersonne(p, ma_liste->p))
 	{
-		mon_pointer = ma_liste.suivant;
+		mon_pointer = ma_liste->suivant;
 		mon_pointer->precedent = NULL;
 		delete ma_liste;
 		return mon_pointer;
@@ -209,7 +278,7 @@ noeud *ajouterArbre(noeud *ma_arbre, const personne &p)
 	noeud *new_element = NULL;
 	// Armazenaremos na lista de forma crescente
 	if(ma_arbre == NULL)
-	{
+	{	
 		new_element = creeUnNoeud(p);
 		return new_element;
 	}
