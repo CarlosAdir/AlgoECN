@@ -1,0 +1,100 @@
+desserte 460 1 plastique 3.0 27 3 
+etagere 120 1 chene 6.0 191 2 
+table-basse 300 1 carton 3.5 193 3 
+table-basse 430 1 carton 8.0 124 1 
+console 10 1 acier 5.0 130 2 
+lampe 130 3 chene 4.0 plastique 8.5 acier 8.5 175 1 
+desserte 160 3 pin 1.5 pin 2.5 carton 5.0 96 1 
+canape 50 1 carton 8.0 85 2 
+fauteuil 70 1 carton 8.5 157 3 
+console 110 1 plastique 5.0 71 1 
+chaise 290 3 acier 7.5 verre 2.0 verre 7.0 143 1 
+table-basse 170 1 plastique 5.5 147 2 
+desserte 440 1 pin 6.0 163 2 
+chaise 160 1 carton 4.5 157 1 
+table-basse 90 1 verre 7.5 67 1 
+table-basse 250 3 acier 9.0 acier 9.0 verre 6.0 125 2 
+lampe 190 1 chene 3.0 106 3 
+desserte 410 1 verre 1.5 178 1 
+chaise 70 1 verre 1.0 176 2 
+chaise 460 1 acier 5.5 73 3 
+lampe 120 1 plastique 1.5 71 3 
+table 170 1 plastique 3.0 83 3 
+table-basse 330 1 acier 8.0 105 3 
+fauteuil 360 1 acier 8.5 112 2 
+lampe 60 1 plastique 9.5 182 1 
+lampe 130 3 pin 6.5 pin 2.5 verre 3.0 139 2 
+console 300 1 plastique 7.5 160 1 
+fauteuil 370 1 pin 3.0 62 2 
+table 320 1 carton 4.0 33 1 
+console 330 1 carton 3.5 66 1 
+console 380 1 acier 7.5 150 2 
+lampe 480 3 verre 1.0 acier 6.0 verre 4.5 188 2 
+fauteuil 70 2 carton 7.5 carton 5.0 94 3 
+desserte 500 1 pin 3.0 35 2 
+etagere 370 1 pin 3.5 181 1 
+table-basse 400 2 carton 5.5 chene 7.0 140 1 
+chaise 350 1 verre 5.0 41 1 
+canape 380 1 acier 6.5 189 2 
+desserte 410 1 chene 2.5 34 1 
+table-basse 440 2 acier 4.0 acier 8.0 206 3 
+canape 460 2 pin 3.0 pin 1.5 179 3 
+chaise 80 2 acier 5.5 chene 8.0 114 3 
+chaise 290 3 pin 8.0 pin 1.0 pin 1.0 162 3 
+console 220 1 pin 8.0 185 1 
+fauteuil 40 3 plastique 3.5 chene 6.0 acier 3.5 32 2 
+etagere 390 1 verre 3.0 77 1 
+fauteuil 190 2 plastique 8.0 pin 2.5 34 1 
+table-basse 360 3 carton 2.0 acier 3.0 carton 7.0 127 1 
+fauteuil 150 1 pin 7.0 143 3 
+canape 440 1 chene 3.0 137 3 
+table 130 1 acier 6.5 93 1 
+table-basse 450 2 pin 1.5 acier 3.5 25 1 
+fauteuil 170 1 verre 3.0 26 1 
+fauteuil 20 1 carton 7.0 209 1 
+console 10 1 verre 5.5 55 1 
+canape 300 2 verre 7.5 chene 7.0 182 1 
+lampe 230 1 verre 7.0 30 1 
+fauteuil 360 1 carton 6.0 204 1 
+console 110 2 verre 4.5 acier 1.5 98 1 
+desserte 400 3 acier 6.0 pin 5.5 verre 2.5 135 1 
+desserte 310 1 pin 2.0 89 3 
+table-basse 100 3 plastique 7.5 pin 6.0 chene 5.0 103 1 
+fauteuil 330 2 chene 8.5 chene 7.0 90 1 
+table-basse 240 3 acier 2.5 plastique 2.0 plastique 6.0 144 1 
+desserte 170 1 plastique 3.5 44 2 
+table-basse 280 3 acier 4.5 verre 5.5 verre 3.5 45 1 
+table-basse 130 1 verre 1.0 171 2 
+chaise 270 3 plastique 5.5 pin 5.5 chene 3.5 137 1 
+chaise 340 1 plastique 5.0 51 1 
+table 150 2 acier 7.5 plastique 4.5 28 1 
+table 230 2 carton 9.5 carton 9.5 119 1 
+table 160 1 carton 9.0 36 3 
+table-basse 100 3 carton 3.5 plastique 4.5 acier 8.0 54 2 
+table 60 1 plastique 5.5 101 2 
+etagere 300 2 pin 9.5 carton 7.0 121 3 
+fauteuil 140 1 pin 5.0 193 1 
+lampe 380 1 pin 4.0 85 1 
+console 310 1 acier 1.0 61 3 
+desserte 450 2 chene 8.5 chene 4.0 134 3 
+desserte 170 1 carton 6.0 142 2 
+table 490 2 acier 4.5 plastique 3.0 70 3 
+chaise 290 1 pin 2.0 28 3 
+desserte 290 1 verre 8.0 68 2 
+fauteuil 90 2 verre 5.0 verre 3.5 83 3 
+etagere 40 1 acier 1.0 204 1 
+console 400 2 verre 2.5 plastique 7.0 27 3 
+chaise 160 1 plastique 8.5 209 2 
+lampe 470 1 verre 5.0 75 1 
+desserte 430 2 chene 6.0 acier 8.0 136 1 
+etagere 240 1 chene 9.0 65 2 
+fauteuil 410 2 plastique 7.5 pin 1.5 44 3 
+console 110 1 carton 7.5 93 2 
+table 460 2 plastique 4.0 verre 1.5 192 3 
+desserte 370 1 verre 1.5 155 2 
+canape 300 2 acier 6.0 plastique 1.0 184 3 
+fauteuil 40 1 pin 4.0 114 1 
+lampe 500 1 verre 6.5 54 3 
+fauteuil 480 1 pin 3.5 135 3 
+desserte 230 1 acier 3.0 56 1 
+canape 290 2 acier 3.0 plastique 9.5 80 2 
